@@ -35,7 +35,7 @@ const Home: NextPage = () => {
               </h1>
               <p className="text-xl">
                 The <span className="text-rose-600">last</span> web analytics
-                tool you'll ever need.
+                tool you&apos;ll ever need.
               </p>
             </div>
             <div className="absolute bottom-10 animate-bounce">Scroll down</div>
