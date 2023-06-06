@@ -15,7 +15,7 @@ const Home: NextPage = () => {
       </Head>
       <div className="flex h-screen max-h-screen w-screen flex-col">
         <Navigation />
-        <main className="flex w-full flex-grow flex-col items-center justify-center overflow-auto bg-gray-100">
+        <div className="flex w-full flex-grow flex-col items-center justify-center overflow-auto bg-gray-100">
           <div className="container relative -mt-12 flex min-h-screen w-full flex-col items-center justify-center gap-12 py-16 md:px-4">
             <div
               className="absolute left-24 h-96 w-96 animate-blob rounded-full bg-rose-500 opacity-25 mix-blend-multiply blur-3xl"
@@ -40,7 +40,7 @@ const Home: NextPage = () => {
             </div>
             <div className="absolute bottom-10 animate-bounce">Scroll down</div>
           </div>
-        </main>
+        </div>
       </div>
     </>
   );
