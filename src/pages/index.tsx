@@ -18,15 +18,15 @@ const Home: NextPage = () => {
         <main className="flex w-full flex-grow flex-col items-center justify-center overflow-auto bg-gray-100">
           <div className="container relative -mt-12 flex min-h-screen w-full flex-col items-center justify-center gap-12 py-16 md:px-4">
             <div
-              className="absolute left-24 h-96 w-96 animate-blob rounded-full bg-rose-500 opacity-50 mix-blend-multiply blur-3xl"
+              className="absolute left-24 h-96 w-96 animate-blob rounded-full bg-rose-500 opacity-25 mix-blend-multiply blur-3xl"
               aria-hidden="true"
             ></div>
             <div
-              className="animation-delay-2500 absolute bottom-24 h-96 w-96 animate-blob rounded-full bg-red-500 opacity-50 mix-blend-multiply blur-3xl"
+              className="animation-delay-2500 absolute bottom-24 h-96 w-96 animate-blob rounded-full bg-red-500 opacity-25 mix-blend-multiply blur-3xl"
               aria-hidden="true"
             ></div>
             <div
-              className="animation-delay-4000 absolute right-32 h-96 w-96 animate-blob rounded-full bg-red-400 opacity-50 mix-blend-multiply blur-3xl"
+              className="animation-delay-4000 absolute right-32 h-96 w-96 animate-blob rounded-full bg-red-400 opacity-40 mix-blend-multiply blur-3xl"
               aria-hidden="true"
             ></div>
             <div className="z-10 text-center">
