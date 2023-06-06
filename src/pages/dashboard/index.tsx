@@ -2,7 +2,7 @@ import { type NextPage } from "next";
 import Head from "next/head";
 import Navigation from "~/components/navigation";
 import { useUser } from "@clerk/nextjs";
-import RestrictedArea from "~/components/protected-area";
+import ProtectedArea from "~/components/protected-area";
 
 const DashboardPage: NextPage = () => {
   const { user } = useUser();
@@ -16,7 +16,7 @@ const DashboardPage: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <RestrictedArea>
+      <ProtectedArea>
         <div className="flex h-screen max-h-screen w-screen flex-col">
           <Navigation />
           <div className="w-full flex-grow overflow-auto bg-gray-100">
@@ -29,7 +29,7 @@ const DashboardPage: NextPage = () => {
             </h1>
           </div>
         </div>
-      </RestrictedArea>
+      </ProtectedArea>
     </>
   );
 };
