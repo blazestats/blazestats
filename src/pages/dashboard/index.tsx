@@ -2,7 +2,7 @@ import { type NextPage } from "next";
 import Head from "next/head";
 import Navigation from "~/components/navigation";
 import { useUser } from "@clerk/nextjs";
-import RestrictedArea from "~/components/restricted-area";
+import RestrictedArea from "~/components/protected-area";
 
 const DashboardPage: NextPage = () => {
   const { user } = useUser();
