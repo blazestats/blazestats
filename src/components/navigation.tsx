@@ -19,6 +19,7 @@ export default function Navigation() {
         <div className="flex flex-grow flex-row items-center gap-2 text-right">
           <SignedIn>
             <Link href="/dashboard">Dashboard</Link>
+            <Link href="/dashboard/sites">Sites</Link>
             <Link href="#">Billing</Link>
             <Link href="#">Documentation</Link>
           </SignedIn>

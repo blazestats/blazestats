@@ -19,14 +19,18 @@ const DashboardPage: NextPage = () => {
       <ProtectedArea>
         <div className="flex h-screen max-h-screen w-screen flex-col">
           <Navigation />
-          <div className="w-full flex-grow overflow-auto bg-gray-100">
-            <h1 className="p-4 text-xl font-bold">
-              Welcome
-              {user
-                ? `, ${user.fullName || user.firstName || user.username || ""}`
-                : ""}
-              ! 👋
-            </h1>
+          <div className="flex w-full flex-grow flex-col items-center overflow-auto bg-gray-100">
+            <div className="w-full max-w-screen-xl">
+              <h1 className="p-4 text-xl font-bold">
+                Welcome
+                {user
+                  ? `, ${
+                      user.fullName || user.firstName || user.username || ""
+                    }`
+                  : ""}
+                ! 👋
+              </h1>
+            </div>
           </div>
         </div>
       </ProtectedArea>
