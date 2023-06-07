@@ -12,10 +12,9 @@ const SitesPage: NextPage = () => {
   const modalRef = React.useRef<NewSiteModalHandle>(null);
   const listOwnSites = api.sites.listOwn.useQuery();
 
-  const onDataChange = useCallback(
-    async () => await listOwnSites.refetch(),
-    []
-  );
+  const onDataChange = useCallback(() => {
+    listOwnSites.refetch().catch((error) => console.error(error));
+  }, [listOwnSites]);
 
   return (
     <>
@@ -43,7 +42,9 @@ const SitesPage: NextPage = () => {
               </div>
               <div className="flex w-full flex-col rounded-md bg-gray-200 p-4">
                 {listOwnSites.data ? (
-                  listOwnSites.data.map((site) => <div>{site.name}</div>)
+                  listOwnSites.data.map((site) => (
+                    <div key={`site-list-entry-${site.id}`}>{site.name}</div>
+                  ))
                 ) : (
                   <></>
                 )}

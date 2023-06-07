@@ -1,4 +1,4 @@
-import { InferModel } from "drizzle-orm";
+import { type InferModel } from "drizzle-orm";
 import { mysqlTable, varchar } from "drizzle-orm/mysql-core";
 import { createInsertSchema, createSelectSchema } from "drizzle-zod";
 

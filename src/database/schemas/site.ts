@@ -1,5 +1,5 @@
 import { mysqlTable, varchar } from "drizzle-orm/mysql-core";
-import { InferModel, eq, relations } from "drizzle-orm";
+import { type InferModel, relations } from "drizzle-orm";
 import { createInsertSchema, createSelectSchema } from "drizzle-zod";
 import { domains } from "~/database/schemas/domains";
 

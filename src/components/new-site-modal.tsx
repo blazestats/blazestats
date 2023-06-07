@@ -30,11 +30,15 @@ const NewSiteModal: React.ForwardRefRenderFunction<
   const [site, setSite] = React.useState<NewSite>(DefaultNewSite);
   const insertSite = api.sites.insert.useMutation();
 
-  const onSaveChanges = React.useCallback(async () => {
-    await insertSite.mutateAsync(site);
-    onDataChange();
-    setOpen(() => false);
-  }, [onDataChange, site]);
+  const onSaveChanges = React.useCallback(() => {
+    (async () => {
+      await insertSite.mutateAsync(site);
+      onDataChange();
+      setOpen(() => false);
+    })()
+      .then(() => console.log("Added new site."))
+      .catch((error) => console.error(error));
+  }, [onDataChange, site, insertSite]);
 
   React.useImperativeHandle(forwardedRef, () => ({
     open() {
